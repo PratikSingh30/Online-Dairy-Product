@@ -1,0 +1,61 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{% block title %} About {% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100"  alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100"  alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100"  alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+</br>
+{% endblock banner-slider %}
+
+{% block main-content %}
+<div class="container mt-3">
+    <br>
+    <h2 class="text-center">About Us </h2>
+    <br>
+    <div class="row-container">
+        <p class="fs-4 text-center">We are a family-owned and operated dairy farm that has been in business for over 50 years. We are passionate about providing our customers with the freshest and highest quality dairy products possible. Our products are made with care and attention to detail, and we use only the finest ingredients.
+            
+            We offer a wide variety of dairy products, including milk, cheese, yogurt, butter, and cream. We also offer a variety of specialty items, such as ice cream, frozen yogurt, and kefir.
+            
+            We are committed to providing our customers with a convenient and enjoyable shopping experience. Our website is easy to use and navigate, and we offer a variety of shipping options to meet your needs.
+            
+            We believe that everyone should have access to fresh, healthy dairy products. That's why we offer our products at a competitive price. We also offer discounts and promotions to our loyal customers.
+            
+            We are committed to providing our customers with the best possible service. If you have any questions or concerns, please do not hesitate to contact us. We are here to help you in any way we can.
+            
+            Thank you for choosing our dairy products. We hope you enjoy them!
+        </p>
+    </div>
+    <br> <br> 
+
+    <h2 class="text-center">Missions</h2>
+    <br>
+    <div class="row-container">
+      <p class="fs-4 text-center">Here is a sample mission statement for a dairy products e-commerce website:
+        <br>
+        To provide our customers with a convenient and reliable way to purchase high-quality, fresh dairy products.
+        We are committed to sourcing our products from local, sustainable farms.
+        We offer a wide variety of dairy products, including milk, cheese, yogurt, butter, and cream.
+        We deliver our products directly to our customers' homes, ensuring freshness and quality.
+        We are dedicated to providing our customers with excellent customer service.
+     </p>
+   </div>
+</div>
+<br> <br>
+
+{% endblock main-content %}

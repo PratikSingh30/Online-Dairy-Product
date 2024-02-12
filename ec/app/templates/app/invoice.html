@@ -1,0 +1,46 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{% block title %} Address {% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>Invoice for: <span class="text-capitalize">{{ request.user }}</span></h3>
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                <div> 
+                    {% comment %} <strong> Total </strong> <small> (including GST) </small> {% endcomment %}
+                </div>
+            </li>
+        </li>
+       
+    </div>
+</div>
+    
+
+ 
+
+ <form action="/checkout/" method="POST" id="myform">
+    {% csrf_token %}
+    {% for ad in add %}
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Name : </strong> {{ad.name}} </p>
+            <p> <strong> Customer ID : </strong> {{ad.pk}}
+            <p><strong> Mobile : </strong> {{ad.mobile}} </p>
+            <p> <strong> Address : </strong>{{ad.locality}} {{ad.city}} , {{ad.state}} - {{ad.zipcode}} </p>
+           
+        </div>
+    </div>
+   <br>
+    {% endfor %}
+
+    <div class="form-check mb-3">
+       
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+            <div> 
+                <strong> Total </strong> <small> (including GST) </small>
+            <span id="totalamount"> <strong> Rs. {{totalamount}} </strong> </span>    
+        </li>
+    </div>
+
+{% endblock main-content %}
